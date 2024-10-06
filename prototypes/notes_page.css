@@ -1,0 +1,210 @@
+:root {
+    --background-base: #F9F9F9;
+    --background-saturated: #F6ECBF;
+    --foreground-standard: #C886E5;
+    --foreground-lighter: #CAADDE;
+
+    --pastel-blue: #b9e2e6;
+    --pastel-yellow: #fcf784;
+    --pastel-pink: #fac7c4;
+    --pastel-green: #bef1ae;
+    --pastel-red: #f9b0a7;
+    --pastel-grey: #d6d6e2;
+    --pastel-orange: #FFD2A5;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-size: 16px;
+}
+
+body {
+    background-image: repeating-linear-gradient(
+        var(--background-saturated),
+        var(--background-base) 40%,
+        var(--background-saturated) 80%
+    );
+}
+
+#centerground {
+    position: absolute;
+    top: 0px;
+    left: 15%;
+    background-image: repeating-linear-gradient(
+        var(--foreground-standard),
+        var(--foreground-lighter) 25%,
+        var(--foreground-standard) 50%
+    );
+    width: 70vw;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+#storyteller-plaque {
+    margin: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#storyteller-plaque a {
+    text-decoration: none;
+    color: black;
+    background-color: #f0f0f0;
+    display: block;
+    width: 80%;
+    padding: 1em;
+    box-shadow: 0px 6px 4px black;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#storyteller-plaque h1 {
+    font-size: 2em;
+    margin: auto 1em;
+}
+
+#storyteller-plaque img {
+    height: 7em;
+    width: auto;
+    margin: 0px 1em;
+}
+
+#storyteller-plaque ul li {
+    padding: 0.5em;
+    background-color: var(--pastel-grey);
+    box-shadow: 1px 1px 0px black;
+}
+
+#storyteller-plaque span {
+    font-size: 0.8em;
+    color: #464646;
+}
+
+#storyteller-plaque ul li span.nametag {
+    font-size: 1.4em;
+    font-style: bold;
+    color: #000000;
+}
+
+#storyteller-plaque ul, #storyteller-plaque li {
+    list-style: none;
+}
+
+#storyteller-plaque ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#storyteller-plaque ul li {
+    margin: 1em;
+}
+
+#notes-section ul, #notes-section li {
+    list-style: none;
+}
+
+#notes-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#notes-section ul li {
+    margin: 1.5em;
+}
+
+#notes-section ul li:nth-child(n) a{
+    transform: rotate(-3deg);
+    position: relative;
+    background-color: var(--pastel-blue);
+    top: 8px;
+    left: 2px;
+}
+
+#notes-section ul li:nth-child(2n) a{
+    transform: rotate(2deg);
+    position: relative;
+    background-color: var(--pastel-green);
+    top: 15px;
+    left: 14px;
+}
+
+#notes-section ul li:nth-child(3n) a{
+    transform: rotate(5deg);
+    position: relative;
+    background-color: var(--pastel-red);
+    top: 6px;
+    left: -2px;
+}
+
+#notes-section ul li:nth-child(4n) a{
+    transform: rotate(4deg);
+    position: relative;
+    background-color: var(--pastel-orange);
+    top: 5px;
+    left: 7px;
+}
+
+#notes-section ul li:nth-child(5n) a{
+    transform: rotate(-1deg);
+    position: relative;
+    background-color: var(--pastel-pink);
+    top: 12px;
+    left: -4px;
+}
+
+#notes-section ul li:nth-child(6n) a{
+    transform: rotate(-5deg);
+    position: relative;
+    background-color: var(--pastel-yellow);
+    top: 1px;
+    left: -12px;
+}
+
+#notes-section ul li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 12em;
+    height: 12em;
+    padding: 1em;
+    box-shadow: 4px 4px 2px black;
+}
+
+#notes-section ul li a img {
+    height: 7em;
+    width: auto;
+    margin: 0px;
+}
+
+#notes-section ul li a br {
+    font-size: 1px;
+}
+
+#notes-section ul li a span {
+    font-size: 0.8em;
+    margin: 1em;
+    color: #464646;
+}
+
+#notes-section ul li a span.nametag {
+    font-size: 1.4em;
+    font-style: bold;
+    color: #000000;
+}
