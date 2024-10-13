@@ -30,6 +30,13 @@ body {
     );
 }
 
+.charactericon {
+    height: 7em;
+    width: auto;
+    margin: 0px;
+}
+
+/* main hub for center elements */
 #centerground {
     position: absolute;
     top: 0px;
@@ -43,6 +50,7 @@ body {
     min-height: 100vh;
     margin: 0px;
     padding: 0px;
+    z-index: 1;
 }
 
 #storyteller-plaque {
@@ -75,8 +83,6 @@ body {
 }
 
 #storyteller-plaque img {
-    height: 7em;
-    width: auto;
     margin: 0px 1em;
 }
 
@@ -187,12 +193,6 @@ body {
     box-shadow: 4px 4px 2px black;
 }
 
-#notes-section ul li a img {
-    height: 7em;
-    width: auto;
-    margin: 0px;
-}
-
 #notes-section ul li a br {
     font-size: 1px;
 }
@@ -207,4 +207,130 @@ body {
     font-size: 1.4em;
     font-style: bold;
     color: #000000;
+}
+
+/* for editing */
+#blackground {
+    position: fixed;
+    background-color: #00000088;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+#blackground .close {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    transform: translate(1rem, -1rem);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px 100px;
+    z-index: 2000;
+}
+
+#editground button, .close {
+    background-color: var(--background-base);
+    border: none;
+}
+
+#editground button:hover, .close:hover {
+    background-color: var(--background-saturated);
+}
+
+#editground {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: var(--pastel-red);
+    width: 60%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    overflow: scroll;
+}
+
+.clickable-icon {
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--background-base);
+    border-radius: 100px 100px;
+}
+
+.clickable-icon:hover {
+    background-color: var(--background-saturated);
+}
+
+#player-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-info input {
+    background: transparent;
+    border: none;
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#player-info input:hover {
+    background-color: #ffffff40;
+}
+
+#notepad {
+    padding: 1rem;
+}
+
+#notepad ul li {
+    list-style: none;
+}
+
+.header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.style-button {
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+}
+
+.style-add-button {
+    padding: 0.3rem 2.5rem;
+}
+
+#notepad table {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#notepad tr td {
+    padding: 0.33rem 0px;
+}
+
+#notepad tr:hover {
+    background-color: #ffffff40;
+}
+
+.notepad-note {
+    width: 90%;
+}
+
+.notepad-delete {
+    text-align: center;
+    width: 10%;
 }
