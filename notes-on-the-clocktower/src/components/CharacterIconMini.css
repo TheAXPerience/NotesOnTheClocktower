@@ -1,0 +1,13 @@
+.ClickableIconMini {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px 100px;
+    text-align: center;
+}
+
+.CharacterIconMini {
+    height: 4em;
+    width: auto;
+    margin: 0px;
+    border-radius: 100px 100px;
+}

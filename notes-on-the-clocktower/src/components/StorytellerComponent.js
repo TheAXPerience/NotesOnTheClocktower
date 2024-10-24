@@ -4,27 +4,27 @@ import "./StorytellerComponent.css";
 
 const StorytellerComponent = () => {
     return (
-        <Container className="Storyteller">
-            <Container className="StorytellerPlaque">
-                <Row className="StorytellerBigTitle">Blood on the Clocktower</Row>
-                <Row className="StorytellerScriptTitle" contentEditable>Trouble Brewing</Row>
-            </Container>
-            <Container className="ListOfStorytellers">
-                <Container className="AuthorImage">
+        <div className="Storyteller">
+            <div className="StorytellerPlaque">
+                <div className="StorytellerBigTitle">Blood on the Clocktower</div>
+                <div className="StorytellerScriptTitle text-truncate" contentEditable>Trouble Brewing</div>
+            </div>
+            <div className="ListOfStorytellers">
+                <div className="AuthorImage">
                     <CharacterIcon imageSrc="https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png" />
-                </Container>
-                <ListGroup className="AuthorList">
-                    <ListGroupItem className="Author">
-                        <Label className="Name" contentEditable>Juvalent</Label>
-                        <Label className="Pronouns" contentEditable>he/him</Label>
-                        <CloseButton className="Close">X</CloseButton>
-                    </ListGroupItem>
-                    <ListGroupItem className="AddAuthor">
-                        <Button>+ Add Storyteller</Button>
-                    </ListGroupItem>
-                </ListGroup>
-            </Container>
-        </Container>
+                </div>
+                <ul className="AuthorList">
+                    <li className="Author">
+                        <label className="Name" contentEditable>Juvalent</label>
+                        <label className="Pronouns" contentEditable>he/him</label>
+                        <CloseButton className="Close" />
+                    </li>
+                    <li className="AddAuthor">
+                        <button>+ Add Storyteller</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     );
 }
 

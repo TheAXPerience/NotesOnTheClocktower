@@ -1,6 +1,7 @@
 import './App.css';
 import AppBackground from './components/AppBackground';
 import "@fontsource/pacifico";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

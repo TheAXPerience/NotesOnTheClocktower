@@ -20,8 +20,8 @@
 
 .StorytellerScriptTitle {
     font-size: 1.75rem;
-    overflow: hidden;
-    overflow-block: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .ListOfStorytellers {
@@ -93,6 +93,7 @@
     background-color: white;
     box-shadow: 1px 1px 1px black;
     border: none;
+    opacity: 100%;
 }
 
 .Author .Close:hover {

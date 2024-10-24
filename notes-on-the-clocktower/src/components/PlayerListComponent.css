@@ -1,0 +1,83 @@
+.PlayersContainer {
+    width: 100%;
+}
+
+.PlayerList {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.PlayerList li {
+    list-style: none;
+    margin: 0.5rem;
+}
+
+.Player button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 12rem;
+    max-width: 18rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.Player button:hover {
+    background-color: lightgrey;
+}
+
+.PlayerCharacter {
+    margin: 0px;
+    padding: 0px;
+}
+
+.PlayerNamePronouns {
+    font-family: "Pacifico";
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 14rem;
+}
+
+.PlayerNamePronouns .Name {
+    width: 10rem;
+    font-size: 1em;
+    font-style: bold;
+    color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.PlayerNamePronouns .Pronouns {
+    width: 8rem;
+    font-size: 0.75em;
+    color: #464646;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.AddPlayer button {
+    width: 12rem;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: "Pacifico";
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 0.25rem;
+}
+
+.AddPlayer button:hover {
+    background-color: lightgrey;
+}

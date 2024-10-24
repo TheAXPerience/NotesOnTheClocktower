@@ -1,16 +1,15 @@
-import { Container } from 'reactstrap';
 import './AppBackground.css';
 import NotesPage from './NotesPage';
 
 const AppBackground = () => {
     return (
-        <Container className='Background'>
-            <Container className='LeftBackground HugCenterLeft'></Container>
-            <Container className='CenterBackground'>
+        <div className='Background'>
+            <div className='LeftBackground HugCenterLeft'></div>
+            <div className='CenterBackground'>
                 <NotesPage />
-            </Container>
-            <Container className='RightBackground HugCenterRight'></Container>
-        </Container>
+            </div>
+            <div className='RightBackground HugCenterRight'></div>
+        </div>
     );
 }
 
