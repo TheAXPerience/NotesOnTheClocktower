@@ -1,0 +1,122 @@
+.Storyteller {
+    position: relative;
+    margin: 0px;
+    padding: 2rem;
+}
+
+.StorytellerPlaque {
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    background-color: lightgray;
+    width: 80%;
+    padding: 1.2em;
+    box-shadow: 0px 6px 4px black;
+}
+
+.StorytellerBigTitle {
+    font-size: 2rem;
+}
+
+.StorytellerScriptTitle {
+    font-size: 1.75rem;
+    overflow: hidden;
+    overflow-block: hidden;
+}
+
+.ListOfStorytellers {
+    margin: 0.25rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.AuthorImage {
+    margin: 0px 2.5rem;
+}
+
+.AuthorList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.Author {
+    list-style: none;
+    position: relative;
+    min-width: 12rem;
+    max-width: 28rem;
+    margin: 4px 1em;
+    padding: 0.5em;
+    background-color: white;
+    box-shadow: 1px 1px 1px black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Author .Name {
+    width: 14rem;
+    font-size: 1.4em;
+    font-style: bold;
+    color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Author .Pronouns {
+    width: 12rem;
+    font-size: 0.8em;
+    color: #464646;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Author .Close {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-family: "Pacifico";
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(0.75rem, -0.75rem);
+    border-radius: 100px 100px;
+    background-color: white;
+    box-shadow: 1px 1px 1px black;
+    border: none;
+}
+
+.Author .Close:hover {
+    background-color: lightgrey;
+}
+
+.AddAuthor {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.AddAuthor button {
+    width: 14rem;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: "Pacifico";
+    font-size: 1.2rem;
+    margin: 4px 1em;
+    padding: 0.25rem;
+}
+
+.AddAuthor button:hover {
+    background-color: lightgrey;
+}
