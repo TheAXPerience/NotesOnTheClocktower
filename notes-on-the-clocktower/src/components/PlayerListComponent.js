@@ -10,12 +10,9 @@ const PlayerListComponent = () => {
 
     return (
         <div className="PlayersContainer">
-            <Collapse isOpen={isOpen}>
-                <PlayerComponent />
-            </Collapse>
             <ul className="PlayerList">
                 <li className="Player">
-                    <button onClick={() => toggle()}>
+                    <button className="PlayerButton" onClick={() => toggle()}>
                         <div className="PlayerCharacter">
                             <CharacterIconMini imageSrc="https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png" />
                         </div>
@@ -24,9 +21,12 @@ const PlayerListComponent = () => {
                             <label className="Pronouns">he/him</label>
                         </div>
                     </button>
+                    <Collapse isOpen={isOpen}>
+                        <PlayerComponent imageSrc="https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png" />
+                    </Collapse>
                 </li>
                 <li className="Player">
-                    <button>
+                    <button className="PlayerButton">
                         <div className="PlayerCharacter">
                             <CharacterIconMini imageSrc="https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png" />
                         </div>
@@ -35,9 +35,12 @@ const PlayerListComponent = () => {
                             <label className="Pronouns">he/him</label>
                         </div>
                     </button>
+                    <Collapse isOpen={isOpen}>
+                        <PlayerComponent />
+                    </Collapse>
                 </li>
                 <li className="AddPlayer">
-                    <button>+ Add Player</button>
+                    <button className="AddPlayerButton">+ Add Player</button>
                 </li>
             </ul>
         </div>

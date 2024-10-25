@@ -7,7 +7,7 @@ const StorytellerComponent = () => {
         <div className="Storyteller">
             <div className="StorytellerPlaque">
                 <div className="StorytellerBigTitle">Blood on the Clocktower</div>
-                <div className="StorytellerScriptTitle text-truncate" contentEditable>Trouble Brewing</div>
+                <input className="StorytellerScriptTitle" placeholder="Enter script name here..." />
             </div>
             <div className="ListOfStorytellers">
                 <div className="AuthorImage">
@@ -15,8 +15,8 @@ const StorytellerComponent = () => {
                 </div>
                 <ul className="AuthorList">
                     <li className="Author">
-                        <label className="Name" contentEditable>Juvalent</label>
-                        <label className="Pronouns" contentEditable>he/him</label>
+                        <input className="Name" value="Juvalent" placeholder="Enter name here"></input>
+                        <input className="Pronouns" value="he/him" placeholder="Enter pronouns here"></input>
                         <CloseButton className="Close" />
                     </li>
                     <li className="AddAuthor">

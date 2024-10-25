@@ -17,7 +17,14 @@
     margin: 0.5rem;
 }
 
-.Player button {
+.Player {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PlayerButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,7 +38,7 @@
     background-color: white;
 }
 
-.Player button:hover {
+.PlayerButton:hover {
     background-color: lightgrey;
 }
 
@@ -67,7 +74,7 @@
     overflow: hidden;
 }
 
-.AddPlayer button {
+.AddPlayerButton {
     width: 12rem;
     background-color: white;
     border: none;
@@ -78,6 +85,6 @@
     padding: 0.25rem;
 }
 
-.AddPlayer button:hover {
+.AddPlayerButton:hover {
     background-color: lightgrey;
 }

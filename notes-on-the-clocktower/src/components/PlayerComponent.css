@@ -1,0 +1,92 @@
+.PlayerNotes {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 1px;
+}
+
+.PlayerInfoSection {
+    padding: 8px;
+    background-color: aliceblue;
+    min-width: 14rem;
+    width: 33%;
+    max-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-3deg);
+    box-shadow: 2px 2px 4px black;
+}
+
+.PlayerInfoSection div {
+    margin: 4px;
+}
+
+.PlayerCharacterImage {
+    display: flex;
+    justify-content: center;
+}
+
+input.Name, input.Pronouns {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+input.Name:hover, input.Pronouns:hover {
+    background-color: lightgrey;
+}
+
+.PlayerNoteSection {
+    min-width: 14rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 8px;
+}
+
+.Noteblock {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 4px 4px 2px black;
+    text-align: center;
+    margin: 8px;
+    transform: rotate(3deg);
+}
+
+.Noteblock .Close {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-family: "Pacifico";
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(0.75rem, -0.75rem);
+    border-radius: 100px 100px;
+    background-color: white;
+    box-shadow: 1px 1px 1px black;
+    border: none;
+    opacity: 100%;
+}
+
+.NoteblockNote {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    text-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    word-break: break-word;
+    vertical-align: center;
+}
