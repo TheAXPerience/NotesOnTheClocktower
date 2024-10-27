@@ -52,14 +52,15 @@ const PlayerListComponent = () => {
             isDead: false,
             isEvil: false,
             characterRole: "",
-            imageSrc: "",
+            imageSrc: "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png", // temporary
             noteColor: pastelColors[Math.floor(Math.random() * pastelColors.length)],
             notes: [],
         };
         dispatch(addPlayer(newPlayer));
     }
 
-    console.log(players);
+    // for debugging
+    // console.log(players);
 
     return (
         <div className="PlayersContainer">

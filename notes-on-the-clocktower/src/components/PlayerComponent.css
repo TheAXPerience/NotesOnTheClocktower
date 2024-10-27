@@ -27,6 +27,7 @@
 }
 
 .PlayerInfoSection {
+    margin-top: 16px;
     padding: 8px;
     /* background-color: aliceblue; */
     min-width: 224px;

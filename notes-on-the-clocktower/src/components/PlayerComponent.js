@@ -1,11 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { CloseButton } from "reactstrap";
 import { ToggleSwitch } from "reactjs-toggleswitch";
 import CharacterIcon from "./CharacterIcon";
 import Noteblock from "./Noteblock";
 import "./PlayerComponent.css";
 import { useDispatch } from "react-redux";
-import { removePlayer } from "../features/playerlist/PlayerListSlice";
+import {
+    removePlayer,
+    editPlayerName,
+    editPlayerPronouns,
+    editPlayerIsDead,
+    editPlayerIsEvil,
+    addPlayerNote,
+    editPlayerNote,
+    removePlayerNote
+} from "../features/playerlist/PlayerListSlice";
 
 // angles for random rotation
 const maxAngle = 5;
@@ -14,10 +23,6 @@ const minAngle = -5;
 const PlayerComponent = (props) => {
     const dispatch = useDispatch();
     const player = props.player;
-
-    // temporary until Redux state is configured
-    const [isDead, setIsDead] = useState(player.isDead);
-    const [isEvil, setIsEvil] = useState(player.isEvil);
 
     // random rotation
     const playerInfoRef = useRef(null);
@@ -42,6 +47,46 @@ const PlayerComponent = (props) => {
         dispatch(removePlayer(player.id));
     }
 
+    // edit player name
+    const EditPlayerName = (event) => {
+        const val = event.target.value;
+        dispatch(editPlayerName({id: player.id, val: val}))
+    }
+
+    // edit player pronouns
+    const EditPlayerPronouns = (event) => {
+        const val = event.target.value;
+        dispatch(editPlayerPronouns({id: player.id, val: val}))
+    }
+
+    // edit isDead
+    const ToggleIsDead = () => {
+        const val = !player.isDead;
+        dispatch(editPlayerIsDead({id: player.id, val: val}))
+    }
+
+    // edit isEvil
+    const ToggleIsEvil = () => {
+        const val = !player.isEvil;
+        dispatch(editPlayerIsEvil({id: player.id, val: val}))
+    }
+
+    // add a new note
+    const AddNewNote = () => {
+        dispatch(addPlayerNote({ id: player.id }));
+    }
+
+    // on change
+    const EditNote = (noteId, val) => {
+        const id = player.id;
+        dispatch(editPlayerNote({ id, noteId, val }));
+    }
+
+    // on delete
+    const DeleteNote = (noteId) => {
+        dispatch(removePlayerNote({ id: player.id, noteId }));
+    }
+
     return (
         <div className="PlayerNotes">
             <CloseButton className="Close" onClick={() => ClosePlayer()} />
@@ -53,48 +98,62 @@ const PlayerComponent = (props) => {
                     <input
                         className="Name"
                         placeholder="Enter name here"
-                        defaultValue={player.playerName}
+                        value={player.playerName}
+                        onChange={EditPlayerName}
                     />
                     <input
                         className="Pronouns"
                         placeholder="Enter pronouns here"
-                        defaultValue={player.pronouns}
+                        value={player.pronouns}
+                        onChange={EditPlayerPronouns}
                     />
                 </div>
                 <div className="PlayerStatus">
                     <ToggleSwitch
-                        checked={isDead}
-                        onToggle={() => setIsDead(!isDead)}
+                        checked={player.isDead}
+                        onToggle={ToggleIsDead}
                         onColor="#FF8890"
                         offColor="#90E898"
                         width={120}
                     />
                     <label className="SwitchLabel">
-                        {isDead ? "Dead" : "Alive"}
+                        {player.isDead ? "Dead" : "Alive"}
                     </label>
                 </div>
                 <div className="PlayerStatus">
                     <ToggleSwitch
-                        checked={isEvil}
-                        onToggle={() => setIsEvil(!isEvil)}
+                        checked={player.isEvil}
+                        onToggle={ToggleIsEvil}
                         onColor="#FF6870"
                         offColor="#A0CCFF"
                         width={120}
                     />
                     <label className="SwitchLabel">
-                        {isEvil ? "Evil" : "Good"}
+                        {player.isEvil ? "Evil" : "Good"}
                     </label>
                 </div>
             </div>
             <div className="PlayerNoteSection">
                 {
                     player.notes.map(note => {
-                        return <Noteblock content={note} noteColor={player.noteColor} />
+                        return (
+                            <Noteblock
+                                note={note}
+                                noteColor={player.noteColor}
+                                onEdit={EditNote}
+                                onClose={DeleteNote}
+                            />
+                        );
                     })
                 }
             </div>
             <div className="PlayerNoteSection">
-                <button className="AddPlayerButton">+ Add Note</button>
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddNewNote}
+                >
+                    + Add Note
+                </button>
             </div>
         </div>
     );

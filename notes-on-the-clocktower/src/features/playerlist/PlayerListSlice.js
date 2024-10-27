@@ -16,10 +16,10 @@ const PlayerListSlice = createSlice({
                 // error?
             }
             const newPlayer = {
-                id: state.playerListIndex + 1,
+                id: state.playerListIndex++,
+                noteIndex: 0,
                 ...action.payload
             };
-            state.playerListIndex++;
             state.playerListArray.push(newPlayer);
         },
         removePlayer: (state, action) => {
@@ -28,11 +28,97 @@ const PlayerListSlice = createSlice({
             if (idx > -1) {
                 state.playerListArray.splice(idx, 1);
             }
+        },
+        editPlayerName: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const val = action.payload.val;
+
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+            if (idx > -1) {
+                state.playerListArray[idx].playerName = val;
+            }
+        },
+        editPlayerPronouns: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const val = action.payload.val;
+
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+            if (idx > -1) {
+                state.playerListArray[idx].pronouns = val;
+            }
+        },
+        editPlayerIsDead: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const val = action.payload.val;
+
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+            if (idx > -1) {
+                state.playerListArray[idx].isDead = val;
+            }
+        },
+        editPlayerIsEvil: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const val = action.payload.val;
+
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+            if (idx > -1) {
+                state.playerListArray[idx].isEvil = val;
+            }
+        },
+        addPlayerNote: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+
+            if (idx > -1) {
+                const player = state.playerListArray[idx];
+                const newNote = {
+                    id: player.noteIndex++,
+                    content: ""
+                };
+                player.notes.push(newNote);
+            }
+        },
+        removePlayerNote: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const noteId = parseInt(action.payload.noteId);
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+
+            if (idx > -1) {
+                const player = state.playerListArray[idx];
+                const noteIdx = player.notes.findIndex(note => note.id === noteId);
+                if (noteIdx > -1) {
+                    player.notes.splice(noteIdx, 1);
+                }
+            }
+        },
+        editPlayerNote: (state, action) => {
+            const id = parseInt(action.payload.id);
+            const noteId = parseInt(action.payload.noteId);
+            const val = action.payload.val;
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+
+            if (idx > -1) {
+                const player = state.playerListArray[idx];
+                const noteIdx = player.notes.findIndex(note => note.id === noteId);
+                if (noteIdx > -1) {
+                    player.notes[noteIdx].content = val;
+                }
+            }
         }
     }
 });
 
-export const { addPlayer, removePlayer } = PlayerListSlice.actions;
+export const {
+    addPlayer,
+    removePlayer,
+    editPlayerName,
+    editPlayerPronouns,
+    editPlayerIsDead,
+    editPlayerIsEvil,
+    addPlayerNote,
+    removePlayerNote,
+    editPlayerNote
+} = PlayerListSlice.actions;
 
 export const playerListReducer = PlayerListSlice.reducer;
 
