@@ -63,6 +63,8 @@ const PlayerListComponent = () => {
                         return PlayerListItem(player);
                     })
                 }
+            </ul>
+            <ul className="PlayerList">
                 <li className="AddPlayer">
                     <button className="AddPlayerButton">+ Add Player</button>
                 </li>
