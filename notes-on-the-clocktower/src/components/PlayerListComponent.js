@@ -1,24 +1,40 @@
 import { Collapse } from 'reactstrap';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAllPlayers, addPlayer } from '../features/playerlist/PlayerListSlice';
 import PlayerComponent from "./PlayerComponent";
 import CharacterIconMini from './CharacterIconMini';
 import "./PlayerListComponent.css";
 
-const PlayerListItem = (player) => {
+const pastelColors = [
+    "#b9e2e6",
+    "#fcf784",
+    "#fac7c4",
+    "#bef1ae",
+    "#f9b0a7",
+    "#d6d6e2",
+    "#ffd2a5"
+];
+
+const PlayerListItem = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <li className="Player">
-            <button className="PlayerButton" onClick={() => setIsOpen(!isOpen)}>
+            <button
+                className="PlayerButton"
+                onClick={() => setIsOpen(!isOpen)}
+                style={{ backgroundColor: props.player.noteColor }}
+            >
                 <div className="PlayerCharacter">
-                    <CharacterIconMini imageSrc={player.imageSrc} />
+                    <CharacterIconMini imageSrc={props.player.imageSrc} />
                 </div>
                 <div className="PlayerNamePronouns">
-                    <label className="Name">{player.playerName}</label>
-                    <label className="Pronouns">{player.pronouns}</label>
+                    <label className="Name">{props.player.playerName}</label>
+                    <label className="Pronouns">{props.player.pronouns}</label>
                 </div>
             </button>
             <Collapse isOpen={isOpen}>
-                <PlayerComponent player={player} imageSrc={player.imageSrc} />
+                <PlayerComponent player={props.player} imageSrc={props.player.imageSrc} />
             </Collapse>
         </li>
     );
@@ -26,47 +42,39 @@ const PlayerListItem = (player) => {
 
 const PlayerListComponent = () => {
     // temporary player list
-    const players = [
-        {
-            playerName: "Samael",
-            pronouns: "he/him",
+    const dispatch = useDispatch();
+    const players = useSelector(selectAllPlayers);
+
+    const handleAddPlayer = () => {
+        const newPlayer = {
+            playerName: "",
+            pronouns: "",
             isDead: false,
             isEvil: false,
-            imageSrc: "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png",
-            noteColor: "#f7a6b9",
-            notes: [
-                "",
-                "holy shit"
-            ]
-        },
-        {
-            playerName: "Tigger",
-            pronouns: "he/him",
-            isDead: true,
-            isEvil: false,
-            imageSrc: "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png",
-            noteColor: "#4bb8da",
-            notes: [
-                "Tigger's Honey Hunt",
-                "Died protecting me :O",
-                "",
-                "abcdefg hijklmnop qrs tuv wx y z"
-            ]
-        },
-    ]
+            characterRole: "",
+            imageSrc: "",
+            noteColor: pastelColors[Math.floor(Math.random() * pastelColors.length)],
+            notes: [],
+        };
+        dispatch(addPlayer(newPlayer));
+    }
+
+    console.log(players);
 
     return (
         <div className="PlayersContainer">
             <ul className="PlayerList">
                 {
                     players.map(player => {
-                        return PlayerListItem(player);
+                        return <PlayerListItem player={player} key={player.id} />;
                     })
                 }
             </ul>
             <ul className="PlayerList">
                 <li className="AddPlayer">
-                    <button className="AddPlayerButton">+ Add Player</button>
+                    <button className="AddPlayerButton" onClick={() => handleAddPlayer()}>
+                        + Add Player
+                    </button>
                 </li>
             </ul>
         </div>

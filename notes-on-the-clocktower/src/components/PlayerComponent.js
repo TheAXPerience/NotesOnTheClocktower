@@ -4,18 +4,23 @@ import { ToggleSwitch } from "reactjs-toggleswitch";
 import CharacterIcon from "./CharacterIcon";
 import Noteblock from "./Noteblock";
 import "./PlayerComponent.css";
+import { useDispatch } from "react-redux";
+import { removePlayer } from "../features/playerlist/PlayerListSlice";
 
 // angles for random rotation
 const maxAngle = 5;
 const minAngle = -5;
 
 const PlayerComponent = (props) => {
+    const dispatch = useDispatch();
     const player = props.player;
+
+    // temporary until Redux state is configured
     const [isDead, setIsDead] = useState(player.isDead);
     const [isEvil, setIsEvil] = useState(player.isEvil);
 
     // random rotation
-    const playerInfoRef = useRef(null)
+    const playerInfoRef = useRef(null);
     useEffect(() => {
         if (playerInfoRef) {
             // rotation
@@ -31,9 +36,15 @@ const PlayerComponent = (props) => {
         }
     }, [playerInfoRef, player.noteColor]);
 
+    // delete player
+    const ClosePlayer = () => {
+        // probably should add an alert first, but just for testing the redux state...
+        dispatch(removePlayer(player.id));
+    }
+
     return (
         <div className="PlayerNotes">
-            <CloseButton className="Close" />
+            <CloseButton className="Close" onClick={() => ClosePlayer()} />
             <div className="PlayerInfoSection" ref={playerInfoRef}>
                 <div className="PlayerCharacterImage">
                     <CharacterIcon imageSrc={props.imageSrc} />
