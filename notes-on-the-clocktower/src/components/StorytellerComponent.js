@@ -1,13 +1,29 @@
-import { Container, ListGroup, ListGroupItem, Label, Row, Button, CloseButton } from "reactstrap";
+import { CloseButton } from "reactstrap";
 import CharacterIcon from "./CharacterIcon";
+import ExpandingTextareaHook from "../hooks/ExpandingTextareaHook";
 import "./StorytellerComponent.css";
+import { useRef, useState } from "react";
 
 const StorytellerComponent = () => {
+    // temporary state
+    const [scriptName, setScriptName] = useState("");
+
+    // setup textarea expansion
+    const textAreaRef = useRef(null);
+    ExpandingTextareaHook(textAreaRef.current, scriptName, 40, 8);
+
     return (
         <div className="Storyteller">
             <div className="StorytellerPlaque">
                 <div className="StorytellerBigTitle">Blood on the Clocktower</div>
-                <input className="StorytellerScriptTitle" placeholder="Enter script name here..." />
+                <textarea
+                    className="StorytellerScriptTitle"
+                    placeholder="Enter script name here..."
+                    ref={textAreaRef}
+                    rows={1}
+                    value={scriptName}
+                    onChange={(event) => setScriptName(event.target.value)}
+                />
             </div>
             <div className="ListOfStorytellers">
                 <div className="AuthorImage">

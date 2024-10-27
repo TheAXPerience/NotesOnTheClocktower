@@ -24,15 +24,15 @@
 }
 
 .StorytellerScriptTitle {
-    min-height: 3rem;
+    resize: none;
     min-width: 10rem;
     width: 100%;
     font-size: 1.4rem;
     text-align: center;
     background-color: transparent;
     text-wrap: wrap;
-    overflow-y: auto;
     border: none;
+    overflow: hidden;
 }
 
 .StorytellerScriptTitle:hover {

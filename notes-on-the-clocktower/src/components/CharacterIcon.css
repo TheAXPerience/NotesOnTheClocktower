@@ -1,13 +1,13 @@
 .ClickableIcon {
     width: 8rem;
     height: 8rem;
-    background-color: #9FEBEB;
+    background-color: white;
     border-radius: 100px 100px;
     text-align: center;
 }
 
 .ClickableIcon:hover {
-    background-color: #734488;
+    background-color: whitesmoke;
 }
 
 .CharacterIcon {
