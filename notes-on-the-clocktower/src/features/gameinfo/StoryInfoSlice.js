@@ -81,13 +81,28 @@ const StoryInfoSlice = createSlice({
             }
         },
         addStorytellerNote: (state, action) => {
-            // TODO
+            const note = {
+                id: state.storytellerNotesIndex++,
+                content: ""
+            };
+            state.storytellerNotesArray.push(note);
         },
         removeStorytellerNote: (state, action) => {
-            // TODO
+            const noteId = parseInt(action.payload.noteId);
+            const idx = state.storytellerNotesArray.findIndex(note => note.id === noteId);
+
+            if (idx > -1) {
+                state.storytellerNotesArray.splice(idx, 1);
+            }
         },
         editStorytellerNote: (state, action) => {
-            // TODO
+            const noteId = parseInt(action.payload.noteId);
+            const val = action.payload.val;
+            const idx = state.storytellerNotesArray.findIndex(note => note.id === noteId);
+
+            if (idx > -1) {
+                state.storytellerNotesArray[idx].content = val;
+            }
         }
     }
 });
