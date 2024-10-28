@@ -10,22 +10,6 @@
     background-repeat: repeat;
 }
 
-.PlayerNotes .Close {
-    width: 24px;
-    height: 24px;
-    font-family: "Pacifico";
-    font-size: 0.75rem;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: translate(12px, -12px);
-    border-radius: 100px 100px;
-    background-color: white;
-    box-shadow: 1px 1px 1px black;
-    border: none;
-    opacity: 100%;
-}
-
 .PlayerInfoSection {
     margin-top: 16px;
     padding: 8px;

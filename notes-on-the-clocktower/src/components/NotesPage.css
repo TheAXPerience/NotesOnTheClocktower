@@ -2,3 +2,23 @@
     margin: 0px;
     padding: 0px;
 }
+
+.CloseButton {
+    width: 24px !important;
+    height: 24px !important;
+    font-family: "Pacifico";
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(12px, -12px);
+    border-radius: 100px 100px !important;
+    background-color: white !important;
+    box-shadow: 1px 1px 1px black;
+    border: none;
+    opacity: 100% !important;
+}
+
+.CloseButton:hover {
+    background-color: lightgrey !important;
+}

@@ -36,7 +36,7 @@ const Noteblock = (props) => {
                 onChange={(event) => props.onEdit(props.note.id, event.target.value)}
                 ref={textAreaRef}
             />
-            <CloseButton className="Close" onClick={() => props.onClose(props.note.id)} />
+            <CloseButton className="CloseButton" onClick={() => props.onClose(props.note.id)} />
         </div>
     );
 }

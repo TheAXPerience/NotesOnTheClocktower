@@ -40,8 +40,8 @@
 }
 
 .ListOfStorytellers {
-    margin: 0.25rem;
-    padding: 1rem;
+    margin: 4px;
+    padding: 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,26 +95,6 @@
     overflow: hidden;
 }
 
-.Author .Close {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-family: "Pacifico";
-    font-size: 0.75rem;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: translate(0.75rem, -0.75rem);
-    border-radius: 100px 100px;
-    background-color: white;
-    box-shadow: 1px 1px 1px black;
-    border: none;
-    opacity: 100%;
-}
-
-.Author .Close:hover {
-    background-color: lightgrey;
-}
-
 .AddAuthor {
     list-style: none;
     width: 100%;
@@ -123,7 +103,7 @@
 }
 
 .AddAuthor button {
-    width: 14rem;
+    width: 224px;
     background-color: white;
     border: none;
     border-radius: 100px;

@@ -1,12 +1,14 @@
-import { CloseButton } from "reactstrap";
+import { CloseButton, Collapse } from "reactstrap";
 import CharacterIcon from "./CharacterIcon";
 import ExpandingTextareaHook from "../hooks/ExpandingTextareaHook";
 import "./StorytellerComponent.css";
 import { useRef, useState } from "react";
+import StorytellerNotepadComponent from "./StorytellerNotepadComponent";
 
 const StorytellerComponent = () => {
     // temporary state
     const [scriptName, setScriptName] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
 
     // setup textarea expansion
     const textAreaRef = useRef(null);
@@ -25,6 +27,12 @@ const StorytellerComponent = () => {
                     onChange={(event) => setScriptName(event.target.value)}
                 />
             </div>
+            <div className="PresentedBy">
+                <button className="PresentedByButton" onClick={() => setIsOpen(!isOpen)}>Presented By...</button>
+                <Collapse isOpen={isOpen}>
+                    <StorytellerNotepadComponent />
+                </Collapse>
+            </div>
             <div className="ListOfStorytellers">
                 <div className="AuthorImage">
                     <CharacterIcon imageSrc="https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png" />
@@ -33,7 +41,7 @@ const StorytellerComponent = () => {
                     <li className="Author">
                         <input className="Name" value="Juvalent" placeholder="Enter name here"></input>
                         <input className="Pronouns" value="he/him" placeholder="Enter pronouns here"></input>
-                        <CloseButton className="Close" />
+                        <CloseButton className="CloseButton" />
                     </li>
                     <li className="AddAuthor">
                         <button>+ Add Storyteller</button>

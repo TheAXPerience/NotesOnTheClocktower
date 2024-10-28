@@ -89,7 +89,7 @@ const PlayerComponent = (props) => {
 
     return (
         <div className="PlayerNotes">
-            <CloseButton className="Close" onClick={() => ClosePlayer()} />
+            <CloseButton className="CloseButton" onClick={() => ClosePlayer()} />
             <div className="PlayerInfoSection" ref={playerInfoRef}>
                 <div className="PlayerCharacterImage">
                     <CharacterIcon imageSrc={props.imageSrc} />
