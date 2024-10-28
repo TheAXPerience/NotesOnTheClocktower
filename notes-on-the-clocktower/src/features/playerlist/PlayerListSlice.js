@@ -66,7 +66,15 @@ const PlayerListSlice = createSlice({
             }
         },
         editPlayerCharacter: (state, action) => {
-            // TODO
+            const id = parseInt(action.payload.id);
+            const character = action.payload.character;
+            const imageSrc = action.payload.imageSrc;
+
+            const idx = state.playerListArray.findIndex(player => player.id === id);
+            if (idx > -1) {
+                state.playerListArray[idx].characterRole = character;
+                state.playerListArray[idx].imageSrc = imageSrc;
+            }
         },
         addPlayerNote: (state, action) => {
             const id = parseInt(action.payload.id);
