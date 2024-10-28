@@ -65,6 +65,9 @@ const PlayerListSlice = createSlice({
                 state.playerListArray[idx].isEvil = val;
             }
         },
+        editPlayerCharacter: (state, action) => {
+            // TODO
+        },
         addPlayerNote: (state, action) => {
             const id = parseInt(action.payload.id);
             const idx = state.playerListArray.findIndex(player => player.id === id);
