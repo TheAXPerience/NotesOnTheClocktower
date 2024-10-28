@@ -118,6 +118,7 @@ export const {
     editPlayerPronouns,
     editPlayerIsDead,
     editPlayerIsEvil,
+    editPlayerCharacter,
     addPlayerNote,
     removePlayerNote,
     editPlayerNote
