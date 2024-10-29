@@ -1,0 +1,1008 @@
+{
+    "baseScripts": [
+        {
+            "name": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a1/Logo_trouble_brewing.png"
+        },
+        {
+            "name": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/43/Logo_sects_and_violets.png"
+        },
+        {
+            "name": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/10/Logo_bad_moon_rising.png"
+        }
+    ],
+    "characterRoles": [
+        {
+            "characterName": "Washerwoman",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/85/Icon_washerwoman.png"
+        },
+        {
+            "characterName": "Librarian",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png"
+        },
+        {
+            "characterName": "Investigator",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png"
+        },
+        {
+            "characterName": "Chef",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png"
+        },
+        {
+            "characterName": "Empath",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_empath.png"
+        },
+        {
+            "characterName": "Fortune Teller",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png"
+        },
+        {
+            "characterName": "Undertaker",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png"
+        },
+        {
+            "characterName": "Monk",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/7c/Icon_monk.png"
+        },
+        {
+            "characterName": "Ravenkeeper",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png"
+        },
+        {
+            "characterName": "Virgin",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_virgin.png"
+        },
+        {
+            "characterName": "Slayer",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png"
+        },
+        {
+            "characterName": "Soldier",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png"
+        },
+        {
+            "characterName": "Mayor",
+            "characterType": "townsfolk",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png"
+        },
+        {
+            "characterName": "Butler",
+            "characterType": "outsider",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png"
+        },
+        {
+            "characterName": "Saint",
+            "characterType": "outsider",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png"
+        },
+        {
+            "characterName": "Recluse",
+            "characterType": "outsider",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png"
+        },
+        {
+            "characterName": "Drunk",
+            "characterType": "outsider",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png"
+        },
+        {
+            "characterName": "Poisoner",
+            "characterType": "minion",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png"
+        },
+        {
+            "characterName": "Spy",
+            "characterType": "minion",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png"
+        },
+        {
+            "characterName": "Baron",
+            "characterType": "minion",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png"
+        },
+        {
+            "characterName": "Scarlet Woman",
+            "characterType": "minion",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png"
+        },
+        {
+            "characterName": "Imp",
+            "characterType": "demon",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png"
+        },
+        {
+            "characterName": "Clockmaker",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/3/3d/Icon_clockmaker.png"
+        },
+        {
+            "characterName": "Dreamer",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_dreamer.png"
+        },
+        {
+            "characterName": "Snake Charmer",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_snakecharmer.png"
+        },
+        {
+            "characterName": "Mathematician",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f1/Icon_mathematician.png"
+        },
+        {
+            "characterName": "Flowergirl",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/ac/Icon_flowergirl.png"
+        },
+        {
+            "characterName": "Town Crier",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_towncrier.png"
+        },
+        {
+            "characterName": "Oracle",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/bb/Icon_oracle.png"
+        },
+        {
+            "characterName": "Savant",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_savant.png"
+        },
+        {
+            "characterName": "Seamstress",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/53/Icon_seamstress.png"
+        },
+        {
+            "characterName": "Philosopher",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_philosopher.png"
+        },
+        {
+            "characterName": "Artist",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_artist.png"
+        },
+        {
+            "characterName": "Juggler",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/42/Icon_juggler.png"
+        },
+        {
+            "characterName": "Sage",
+            "characterType": "townsfolk",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a0/Icon_sage.png"
+        },
+        {
+            "characterName": "Mutant",
+            "characterType": "outsider",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png"
+        },
+        {
+            "characterName": "Sweetheart",
+            "characterType": "outsider",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png"
+        },
+        {
+            "characterName": "Barber",
+            "characterType": "outsider",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png"
+        },
+        {
+            "characterName": "Klutz",
+            "characterType": "outsider",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png"
+        },
+        {
+            "characterName": "Evil Twin",
+            "characterType": "minion",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_eviltwin.png"
+        },
+        {
+            "characterName": "Witch",
+            "characterType": "minion",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/7b/Icon_witch.png"
+        },
+        {
+            "characterName": "Cerenovus",
+            "characterType": "minion",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/45/Icon_cerenovus.png"
+        },
+        {
+            "characterName": "Pit-Hag",
+            "characterType": "minion",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6b/Icon_pithag.png"
+        },
+        {
+            "characterName": "Fang Gu",
+            "characterType": "demon",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png"
+        },
+        {
+            "characterName": "Vigormortis",
+            "characterType": "demon",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png"
+        },
+        {
+            "characterName": "No Dashii",
+            "characterType": "demon",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png"
+        },
+        {
+            "characterName": "Vortox",
+            "characterType": "demon",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png"
+        },
+        {
+            "characterName": "Grandmother",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_grandmother.png"
+        },
+        {
+            "characterName": "Sailor",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_sailor.png"
+        },
+        {
+            "characterName": "Chambermaid",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_chambermaid.png"
+        },
+        {
+            "characterName": "Exorcist",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c2/Icon_exorcist.png"
+        },
+        {
+            "characterName": "Innkeeper",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png"
+        },
+        {
+            "characterName": "Gambler",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/fd/Icon_gambler.png"
+        },
+        {
+            "characterName": "Gossip",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c7/Icon_gossip.png"
+        },
+        {
+            "characterName": "Courtier",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_courtier.png"
+        },
+        {
+            "characterName": "Professor",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_professor.png"
+        },
+        {
+            "characterName": "Minstrel",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_minstrel.png"
+        },
+        {
+            "characterName": "Tea Lady",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_tealady.png"
+        },
+        {
+            "characterName": "Pacifist",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_pacifist.png"
+        },
+        {
+            "characterName": "Fool",
+            "characterType": "townsfolk",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_fool.png"
+        },
+        {
+            "characterName": "Goon",
+            "characterType": "outsider",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png"
+        },
+        {
+            "characterName": "Lunatic",
+            "characterType": "outsider",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/64/Icon_lunatic.png"
+        },
+        {
+            "characterName": "Tinker",
+            "characterType": "outsider",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png"
+        },
+        {
+            "characterName": "Moonchild",
+            "characterType": "outsider",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png"
+        },
+        {
+            "characterName": "Godfather",
+            "characterType": "minion",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d0/Icon_godfather.png"
+        },
+        {
+            "characterName": "Devil's Advocate",
+            "characterType": "minion",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/09/Icon_devilsadvocate.png"
+        },
+        {
+            "characterName": "Assassin",
+            "characterType": "minion",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/49/Icon_assassin.png"
+        },
+        {
+            "characterName": "Mastermind",
+            "characterType": "minion",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_mastermind.png"
+        },
+        {
+            "characterName": "Zombuul",
+            "characterType": "demon",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png"
+        },
+        {
+            "characterName": "Pukka",
+            "characterType": "demon",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png"
+        },
+        {
+            "characterName": "Shabaloth",
+            "characterType": "demon",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png"
+        },
+        {
+            "characterName": "Po",
+            "characterType": "demon",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png"
+        },
+        {
+            "characterName": "Acrobat",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png"
+        },
+        {
+            "characterName": "Alchemist",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_alchemist.png"
+        },
+        {
+            "characterName": "Alsaahir",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_alsaahir.png"
+        },
+        {
+            "characterName": "Amnesiac",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png"
+        },
+        {
+            "characterName": "Atheist",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/43/Icon_atheist.png"
+        },
+        {
+            "characterName": "Balloonist",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_balloonist.png"
+        },
+        {
+            "characterName": "Banshee",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_banshee.png"
+        },
+        {
+            "characterName": "Bounty Hunter",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5b/Icon_bountyhunter.png"
+        },
+        {
+            "characterName": "Cannibal",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_cannibal.png"
+        },
+        {
+            "characterName": "Choirboy",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_choirboy.png"
+        },
+        {
+            "characterName": "Cult Leader",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6c/Icon_cultleader.png"
+        },
+        {
+            "characterName": "Engineer",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/b9/Icon_engineer.png"
+        },
+        {
+            "characterName": "Farmer",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_farmer.png"
+        },
+        {
+            "characterName": "Fisherman",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_fisherman.png"
+        },
+        {
+            "characterName": "General",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_general.png"
+        },
+        {
+            "characterName": "High Priestess",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_highpriestess.png"
+        },
+        {
+            "characterName": "Huntsman",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png"
+        },
+        {
+            "characterName": "King",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_king.png"
+        },
+        {
+            "characterName": "Knight",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_knight.png"
+        },
+        {
+            "characterName": "Lycanthrope",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png"
+        },
+        {
+            "characterName": "Magician",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/93/Icon_magician.png"
+        },
+        {
+            "characterName": "Nightwatchman",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f0/Icon_nightwatchman.png"
+        },
+        {
+            "characterName": "Noble",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/cc/Icon_noble.png"
+        },
+        {
+            "characterName": "Pixie",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png"
+        },
+        {
+            "characterName": "Poppy Grower",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/91/Icon_poppygrower.png"
+        },
+        {
+            "characterName": "Preacher",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/82/Icon_preacher.png"
+        },
+        {
+            "characterName": "Shugenja",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_shugenja.png"
+        },
+        {
+            "characterName": "Steward",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_steward.png"
+        },
+        {
+            "characterName": "Village Idiot",
+            "characterType": "townsfolk",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/da/Icon_villageidiot.png"
+        },
+        {
+            "characterName": "Damsel",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png"
+        },
+        {
+            "characterName": "Golem",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/2b/Icon_golem.png"
+        },
+        {
+            "characterName": "Hatter",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/44/Icon_hatter.png"
+        },
+        {
+            "characterName": "Heretic",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_heretic.png"
+        },
+        {
+            "characterName": "Ogre",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_ogre.png"
+        },
+        {
+            "characterName": "Plague Doctor",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e2/Icon_plaguedoctor.png"
+        },
+        {
+            "characterName": "Politician",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a3/Icon_politician.png"
+        },
+        {
+            "characterName": "Puzzlemaster",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/7a/Icon_puzzlemaster.png"
+        },
+        {
+            "characterName": "Snitch",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png"
+        },
+        {
+            "characterName": "Zealot",
+            "characterType": "outsider",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_zealot.png"
+        },
+        {
+            "characterName": "Boomdandy",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/20/Icon_boomdandy.png"
+        },
+        {
+            "characterName": "Boffin",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_boffin.png"
+        },
+        {
+            "characterName": "Fearmonger",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_fearmonger.png"
+        },
+        {
+            "characterName": "Goblin",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e2/Icon_goblin.png"
+        },
+        {
+            "characterName": "Harpy",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_harpy.png"
+        },
+        {
+            "characterName": "Marionette",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_marionette.png"
+        },
+        {
+            "characterName": "Mezepheles",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_mezepheles.png"
+        },
+        {
+            "characterName": "Organ Grinder",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/61/Icon_organgrinder.png"
+        },
+        {
+            "characterName": "Psychopath",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a3/Icon_psychopath.png"
+        },
+        {
+            "characterName": "Summoner",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_summoner.png"
+        },
+        {
+            "characterName": "Vizier",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a4/Icon_vizier.png"
+        },
+        {
+            "characterName": "Widow",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_widow.png"
+        },
+        {
+            "characterName": "Al-Hadikhia",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/18/Icon_alhadikhia.png"
+        },
+        {
+            "characterName": "Kazali",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/3/3c/Icon_kazali.png"
+        },
+        {
+            "characterName": "Legion",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_legion.png"
+        },
+        {
+            "characterName": "Leviathan",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a7/Icon_leviathan.png"
+        },
+        {
+            "characterName": "Lil' Monsta",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_lilmonsta.png"
+        },
+        {
+            "characterName": "Lleech",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/70/Icon_lleech.png"
+        },
+        {
+            "characterName": "Lord of Typhon",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_lordoftyphon.png"
+        },
+        {
+            "characterName": "Ojo",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_ojo.png"
+        },
+        {
+            "characterName": "Riot",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/2d/Icon_riot.png"
+        },
+        {
+            "characterName": "Yaggababble",
+            "characterType": "demon",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_yaggababble.png"
+        },
+        {
+            "characterName": "Scapegoat",
+            "characterType": "traveller",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/3/3a/Icon_scapegoat.png"
+        },
+        {
+            "characterName": "Gunslinger",
+            "characterType": "traveller",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/1c/Icon_gunslinger.png"
+        },
+        {
+            "characterName": "Beggar",
+            "characterType": "traveller",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e3/Icon_beggar.png"
+        },
+        {
+            "characterName": "Bureaucrat",
+            "characterType": "traveller",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_bureaucrat.png"
+        },
+        {
+            "characterName": "Thief",
+            "characterType": "traveller",
+            "baseScript": "Trouble Brewing",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/77/Icon_thief.png"
+        },
+        {
+            "characterName": "Butcher",
+            "characterType": "traveller",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e3/Icon_butcher.png"
+        },
+        {
+            "characterName": "Bone Collector",
+            "characterType": "traveller",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/9e/Icon_bonecollector.png"
+        },
+        {
+            "characterName": "Harlot",
+            "characterType": "traveller",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_harlot.png"
+        },
+        {
+            "characterName": "Barista",
+            "characterType": "traveller",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_barista.png"
+        },
+        {
+            "characterName": "Deviant",
+            "characterType": "traveller",
+            "baseScript": "Sects and Violets",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a5/Icon_deviant.png"
+        },
+        {
+            "characterName": "Apprentice",
+            "characterType": "traveller",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/03/Icon_apprentice.png"
+        },
+        {
+            "characterName": "Matron",
+            "characterType": "traveller",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/21/Icon_matron.png"
+        },
+        {
+            "characterName": "Voudon",
+            "characterType": "traveller",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_voudon.png"
+        },
+        {
+            "characterName": "Judge",
+            "characterType": "traveller",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/59/Icon_judge.png"
+        },
+        {
+            "characterName": "Bishop",
+            "characterType": "traveller",
+            "baseScript": "Bad Moon Rising",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/7/71/Icon_bishop.png"
+        },
+        {
+            "characterName": "Gangster",
+            "characterType": "traveller",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a5/Icon_gangster.png"
+        },
+        {
+            "characterName": "Doomsayer",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8f/Icon_doomsayer.png"
+        },
+        {
+            "characterName": "Angel",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/ca/Icon_angel.png"
+        },
+        {
+            "characterName": "Buddhist",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_buddhist.png"
+        },
+        {
+            "characterName": "Hell's Librarian",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_hellslibrarian.png"
+        },
+        {
+            "characterName": "Revolutionary",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/94/Icon_revolutionary.png"
+        },
+        {
+            "characterName": "Fiddler",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e5/Icon_fiddler.png"
+        },
+        {
+            "characterName": "Toymaker",
+            "characterType": "fabled",
+            "baseScript": "Any Game",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/27/Icon_toymaker.png"
+        },
+        {
+            "characterName": "Fibbin",
+            "characterType": "fabled",
+            "baseScript": "Custom Games",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_fibbin.png"
+        },
+        {
+            "characterName": "Duchess",
+            "characterType": "fabled",
+            "baseScript": "Custom Games",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_duchess.png"
+        },
+        {
+            "characterName": "Sentinel",
+            "characterType": "fabled",
+            "baseScript": "Custom Games",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d4/Icon_sentinel.png"
+        },
+        {
+            "characterName": "Spirit of Ivory",
+            "characterType": "fabled",
+            "baseScript": "Custom Games",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/96/Icon_spiritofivory.png"
+        },
+        {
+            "characterName": "Djinn",
+            "characterType": "fabled",
+            "baseScript": "Custom Games",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/86/Icon_djinn.png"
+        },
+        {
+            "characterName": "Bootlegger",
+            "characterType": "fabled",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_bootlegger.png"
+        },
+        {
+            "characterName": "Ferryman",
+            "characterType": "fabled",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8f/Icon_ferryman.png"
+        },
+        {
+            "characterName": "Gardener",
+            "characterType": "fabled",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_gardener.png"
+        },
+        {
+            "characterName": "Storm Catcher",
+            "characterType": "fabled",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_stormcatcher.png"
+        }
+    ]
+}
