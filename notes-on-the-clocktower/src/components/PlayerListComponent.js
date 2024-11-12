@@ -65,18 +65,18 @@ const PlayerListComponent = () => {
     return (
         <div className="PlayersContainer">
             <ul className="PlayerList">
-                {
-                    players.map(player => {
-                        return <PlayerListItem player={player} key={player.id} />;
-                    })
-                }
-            </ul>
-            <ul className="PlayerList">
                 <li className="AddPlayer">
                     <button className="AddPlayerButton" onClick={() => handleAddPlayer()}>
                         + Add Player
                     </button>
                 </li>
+            </ul>
+            <ul className="PlayerList">
+                {
+                    players.map(player => {
+                        return <PlayerListItem player={player} key={player.id} />;
+                    })
+                }
             </ul>
         </div>
     );

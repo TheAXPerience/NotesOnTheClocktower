@@ -1,6 +1,7 @@
 import { CloseButton } from "reactstrap";
-import { useEffect, useRef } from "react";
+import { useCallback, useRef } from "react";
 import ExpandingTextareaHook from "../hooks/ExpandingTextareaHook";
+import "./Noteblock.css";
 
 const maxAngle = 5;
 const minAngle = -5;
@@ -11,23 +12,35 @@ const Noteblock = (props) => {
     ExpandingTextareaHook(textAreaRef.current, props.note.content, 40, 8);
 
     // random rotation
+    const rotateColorRef = useCallback(node => {
+        if (node) {
+            const angle = Math.random() * (maxAngle - minAngle) + minAngle;
+            node.style.transform = `rotate(${angle}deg)`;
+
+            node.style.backgroundColor = props.noteColor;
+        }
+    }, [props.noteColor]);
+
+    /*
     const noteBlockRef = useRef(null);
+    
     useEffect(() => {
-        if (noteBlockRef) {
+        if (noteBlockRef.current) {
             const angle = Math.random() * (maxAngle - minAngle) + minAngle;
             noteBlockRef.current.style.transform = `rotate(${angle}deg)`;
         }
-    }, [noteBlockRef]);
+    }, [noteBlockRef.current]);
 
     // set color
     useEffect(() => {
-        if (noteBlockRef) {
+        if (noteBlockRef.current) {
             noteBlockRef.current.style.backgroundColor = props.noteColor;
         }
-    }, [noteBlockRef, props.noteColor]);
+    }, [noteBlockRef.current, props.noteColor]);
+    */
 
     return (
-        <div className="Noteblock" ref={noteBlockRef} key={props.note.id}>
+        <div className="Noteblock" ref={rotateColorRef} key={props.note.id}>
             <textarea
                 className="NoteblockNote"
                 placeholder="Write notes here..."

@@ -39,80 +39,28 @@
     background-color: aliceblue;
 }
 
-.ListOfStorytellers {
-    margin: 4px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.AuthorImage {
-    margin: 0px 2.5rem;
-}
-
-.AuthorList {
+.PresentedBy {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
 }
 
-.Author {
-    list-style: none;
-    position: relative;
-    min-width: 12rem;
-    max-width: 28rem;
-    margin: 4px 1em;
-    padding: 0.5em;
-    background-color: white;
-    box-shadow: 1px 1px 1px black;
+.PresentedByButton {
+    margin-top: 16px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.Author .Name {
-    width: 14rem;
-    font-size: 1.4em;
-    font-style: bold;
-    color: #000000;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.Author .Pronouns {
-    width: 12rem;
-    font-size: 0.8em;
-    color: #464646;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.AddAuthor {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-}
-
-.AddAuthor button {
-    width: 224px;
-    background-color: white;
-    border: none;
-    border-radius: 100px;
-    font-family: "Pacifico";
+    flex-wrap: wrap;
     font-size: 1.2rem;
-    margin: 4px 1em;
-    padding: 0.25rem;
+    min-width: 236px;
+    max-width: 288px;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
 }
 
-.AddAuthor button:hover {
+.PresentedByButton:hover {
     background-color: lightgrey;
 }

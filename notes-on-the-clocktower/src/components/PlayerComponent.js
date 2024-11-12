@@ -134,6 +134,14 @@ const PlayerComponent = (props) => {
                 </div>
             </div>
             <div className="PlayerNoteSection">
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddNewNote}
+                >
+                    + Add Note
+                </button>
+            </div>
+            <div className="PlayerNoteSection">
                 {
                     player.notes.map(note => {
                         return (
@@ -146,14 +154,6 @@ const PlayerComponent = (props) => {
                         );
                     })
                 }
-            </div>
-            <div className="PlayerNoteSection">
-                <button
-                    className="AddPlayerButton"
-                    onClick={AddNewNote}
-                >
-                    + Add Note
-                </button>
             </div>
         </div>
     );

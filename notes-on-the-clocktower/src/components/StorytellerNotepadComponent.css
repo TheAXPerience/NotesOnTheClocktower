@@ -1,0 +1,51 @@
+.StorytellerNotes {
+    position: relative;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #FEFBF8;
+    background-image: url("../../public/red_paper_lines.png");
+    background-repeat: repeat;
+}
+
+.StorytellerNoteSection {
+    min-width: 224px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+}
+
+.StorytellerTag {
+    margin: 8px;
+    padding: 8px;
+    background-color: white;
+    min-width: 224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 2px black;
+}
+
+.StorytellerTag .Name {
+    width: 14rem;
+    font-size: 1.4em;
+    font-style: bold;
+    color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.StorytellerTag .Pronouns {
+    width: 12rem;
+    font-size: 0.8em;
+    color: #464646;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

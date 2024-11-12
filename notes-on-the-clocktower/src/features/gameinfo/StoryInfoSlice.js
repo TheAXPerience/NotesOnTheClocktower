@@ -28,7 +28,7 @@ const StoryInfoSlice = createSlice({
             state.storytellerArray.push(storyteller);
         },
         removeStoryteller: (state, action) => {
-            const id = parseInt(action.payload);
+            const id = parseInt(action.payload.id);
             const idx = state.storytellerArray.findIndex(storyteller => storyteller.id === id);
             
             if (idx > -1) {
@@ -129,4 +129,12 @@ export const selectScriptTitle = (state) => {
 
 export const selectAllStorytellers = (state) => {
     return state.storyinfo.storytellerArray;
+}
+
+export const selectAllStorytellerNotes = (state) => {
+    return state.storyinfo.storytellerNotesArray;
+}
+
+export const selectAllStorytellerCharacters = (state) => {
+    return state.storyinfo.storytellerCharactersArray;
 }

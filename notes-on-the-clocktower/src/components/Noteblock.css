@@ -1,0 +1,23 @@
+.Noteblock {
+    width: 224px;
+    padding: 8px;
+    /* background-color: white; */
+    box-shadow: 4px 4px 2px black;
+    text-align: center;
+    margin: 8px;
+    /* transform: rotate(3deg); */
+}
+
+.NoteblockNote {
+    resize: none;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    text-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    word-break: break-word;
+    vertical-align: center;
+    background-color: transparent;
+    border: 1px black solid;
+}
