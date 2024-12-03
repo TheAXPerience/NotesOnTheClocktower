@@ -62,7 +62,7 @@ const StoryInfoSlice = createSlice({
             state.storytellerCharactersArray.push(storytellerCharacter);
         },
         removeStorytellerCharacter: (state, action) => {
-            const id = parseInt(action.payload);
+            const id = parseInt(action.payload.id);
             const idx = state.storytellerCharactersArray.findIndex(sc => sc.id === id);
 
             if (idx > -1) {
@@ -72,7 +72,7 @@ const StoryInfoSlice = createSlice({
         editStorytellerCharacter: (state, action) => {
             const id = parseInt(action.payload.id);
             const character = action.payload.character;
-            const imageSrc = action.payloag.imageSrc;
+            const imageSrc = action.payload.imageSrc;
             const idx = state.storytellerCharactersArray.findIndex(sc => sc.id === id);
 
             if (idx > -1) {

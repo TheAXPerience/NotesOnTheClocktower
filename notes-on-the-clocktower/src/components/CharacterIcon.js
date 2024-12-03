@@ -2,8 +2,8 @@ import "./CharacterIcon.css";
 
 const CharacterIcon = (props) => {
     return (
-        <div className="ClickableIcon">
-            <img className="CharacterIcon" src={props.imageSrc} />
+        <div className="ClickableIcon" onClick={props.onClick}>
+            <img className="CharacterIcon" src={props.imageSrc} alt="" />
         </div>
     );
 }

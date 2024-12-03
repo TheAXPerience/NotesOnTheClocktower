@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addStoryteller, addStorytellerNote, editStorytellerName, editStorytellerNote, editStorytellerPronouns, removeStoryteller, removeStorytellerNote, selectAllStorytellerCharacters, selectAllStorytellerNotes, selectAllStorytellers } from "../features/gameinfo/StoryInfoSlice";
-import { useCallback, useEffect, useRef } from "react";
+import { addStoryteller, addStorytellerCharacter, addStorytellerNote, editStorytellerCharacter, editStorytellerName, editStorytellerNote, editStorytellerPronouns, removeStoryteller, removeStorytellerCharacter, removeStorytellerNote, selectAllStorytellerCharacters, selectAllStorytellerNotes, selectAllStorytellers } from "../features/gameinfo/StoryInfoSlice";
+import { useCallback, useState } from "react";
 import { CloseButton } from "reactstrap";
 import Noteblock from "./Noteblock";
 import "./StorytellerNotepadComponent.css";
+import CharacterIcon from "./CharacterIcon";
+import CharacterSelectModal from "./CharacterSelectModal";
 
 // angles for random rotation
 const maxAngle = 5;
@@ -21,7 +23,7 @@ const StorytellerTag = (props) => {
     }, []);
 
     return (
-        <div className="StorytellerTag" ref={rotateRef}>
+        <div className="StorytellerTag" ref={rotateRef} key={storyteller.id}>
             <CloseButton className="CloseButton" onClick={props.deleteStoryteller} />
             <input
                 className="Name"
@@ -34,6 +36,35 @@ const StorytellerTag = (props) => {
                 placeholder="Enter pronouns here"
                 value={storyteller.pronouns}
                 onChange={props.editPronouns}
+            />
+        </div>
+    );
+}
+
+// props = editCharacter, deleteCharacter, id, character, imageSrc
+const StorytellerCharacter = (props) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
+    // random rotation
+    const rotateRef = useCallback(node => {
+        if (node) {
+            const angle = Math.random() * (maxAngle - minAngle) + minAngle;
+            node.style.transform = `rotate(${angle}deg)`;
+        }
+    }, []);
+    
+    return (
+        <div className="StorytellerCharacter" ref={rotateRef}>
+            <CloseButton className="CloseButton" onClick={props.deleteCharacter} />
+            <CharacterIcon
+                imageSrc={props.imageSrc}
+                onClick={() => setModalOpen(!modalOpen)}
+            />
+            <CharacterSelectModal
+                isOpen={modalOpen}
+                toggle={() => setModalOpen(!modalOpen)}
+                modalLines={"ModalLinesRed"}
+                onSelect={() => console.log("Hello World - Storyteller")}
             />
         </div>
     );
@@ -68,10 +99,20 @@ const StorytellerNotepadComponent = () => {
     }
 
     // TODO: add character
+    const AddStorytellerCharacter = () => {
+        dispatch(addStorytellerCharacter({}));
+    }
 
     // TODO: edit character
+    const EditStorytellerCharacter = (id) => (character, imageSrc) => () => {
+        // const val = event.target.value;
+        dispatch(editStorytellerCharacter({ id, character, imageSrc }));
+    }
 
     // TODO: delete character
+    const DeleteStorytellerCharacter = (id) => () => {
+        dispatch(removeStorytellerCharacter({ id }));
+    }
 
     // add note
     const AddNewNote = () => {
@@ -102,6 +143,30 @@ const StorytellerNotepadComponent = () => {
                                 editName={EditStorytellerName(storyteller.id)}
                                 editPronouns={EditStorytellerPronouns(storyteller.id)}
                                 deleteStoryteller={() => DeleteStoryteller(storyteller.id)}
+                            />
+                        );
+                    })
+                }
+            </div>
+            <div className="StorytellerNoteSection">
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddStorytellerCharacter}
+                >
+                    + Add Character
+                </button>
+            </div>
+            <div className="StorytellerNoteSection">
+                {
+                    characters.map(character => {
+                        return (
+                            // props = editCharacter, deleteCharacter, id, character, imageSrc
+                            <StorytellerCharacter
+                                editCharacter={EditStorytellerCharacter(character.id)}
+                                deleteCharacter={DeleteStorytellerCharacter(character.id)}
+                                id={character.id}
+                                character={character.character}
+                                imageSrc={character.imageSrc}
                             />
                         );
                     })

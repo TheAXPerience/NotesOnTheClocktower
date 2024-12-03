@@ -1,0 +1,23 @@
+.CharacterSelectModal {
+    background-color: #FEFBF8;
+}
+
+.ModalSection {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ModalLinesBlue {
+    background-color: #FEFBF8;
+    background-image: url("../../public/paper_lines.png");
+    background-repeat: repeat;
+}
+
+.ModalLinesRed {
+    background-color: #FEFBF8;
+    background-image: url("../../public/red_paper_lines.png");
+    background-repeat: repeat;
+}

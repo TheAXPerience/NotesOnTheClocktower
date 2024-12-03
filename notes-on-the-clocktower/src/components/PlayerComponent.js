@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CloseButton } from "reactstrap";
 import { ToggleSwitch } from "reactjs-toggleswitch";
 import CharacterIcon from "./CharacterIcon";
@@ -15,6 +15,7 @@ import {
     editPlayerNote,
     removePlayerNote
 } from "../features/playerlist/PlayerListSlice";
+import CharacterSelectModal from "./CharacterSelectModal";
 
 // angles for random rotation
 const maxAngle = 5;
@@ -23,6 +24,8 @@ const minAngle = -5;
 const PlayerComponent = (props) => {
     const dispatch = useDispatch();
     const player = props.player;
+
+    const [modalOpen, setModalOpen] = useState(false);
 
     // random rotation
     const playerInfoRef = useRef(null);
@@ -92,7 +95,10 @@ const PlayerComponent = (props) => {
             <CloseButton className="CloseButton" onClick={() => ClosePlayer()} />
             <div className="PlayerInfoSection" ref={playerInfoRef}>
                 <div className="PlayerCharacterImage">
-                    <CharacterIcon imageSrc={props.imageSrc} />
+                    <CharacterIcon
+                        imageSrc={props.imageSrc}
+                        onClick={() => setModalOpen(!modalOpen)}
+                    />
                 </div>
                 <div className="PlayerNamePronouns">
                     <input
@@ -155,6 +161,12 @@ const PlayerComponent = (props) => {
                     })
                 }
             </div>
+            <CharacterSelectModal
+                isOpen={modalOpen}
+                toggle={() => setModalOpen(!modalOpen)}
+                modalLines={"ModalLinesBlue"}
+                onSelect={() => console.log("Hello World - Player")}
+            />
         </div>
     );
 }

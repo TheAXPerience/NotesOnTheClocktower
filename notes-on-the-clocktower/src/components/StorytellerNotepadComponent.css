@@ -33,6 +33,17 @@
     box-shadow: 4px 4px 2px black;
 }
 
+.StorytellerCharacter {
+    margin: 8px;
+    padding: 8px;
+    background-color: white;
+    min-width: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 2px black;
+}
+
 .StorytellerTag .Name {
     width: 14rem;
     font-size: 1.4em;

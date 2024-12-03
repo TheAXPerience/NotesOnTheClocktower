@@ -47,6 +47,7 @@
 
 .PresentedByButton {
     margin-top: 16px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,6 +60,7 @@
     border: none;
     border-radius: 50px;
     background-color: white;
+    box-shadow: 2px 2px 2px black;
 }
 
 .PresentedByButton:hover {
