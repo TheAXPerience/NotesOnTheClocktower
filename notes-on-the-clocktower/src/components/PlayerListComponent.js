@@ -6,6 +6,7 @@ import PlayerComponent from "./PlayerComponent";
 import CharacterIconMini from './CharacterIconMini';
 import "./PlayerListComponent.css";
 
+// TODO: add more colors, fix color assignment
 const pastelColors = [
     "#b9e2e6",
     "#fcf784",
@@ -59,24 +60,21 @@ const PlayerListComponent = () => {
         dispatch(addPlayer(newPlayer));
     }
 
-    // for debugging
-    // console.log(players);
-
     return (
         <div className="PlayersContainer">
-            <ul className="PlayerList">
-                <li className="AddPlayer">
-                    <button className="AddPlayerButton" onClick={() => handleAddPlayer()}>
-                        + Add Player
-                    </button>
-                </li>
-            </ul>
             <ul className="PlayerList">
                 {
                     players.map(player => {
                         return <PlayerListItem player={player} key={player.id} />;
                     })
                 }
+            </ul>
+            <ul className="PlayerList">
+                <li className="AddPlayer">
+                    <button className="AddPlayerButton" onClick={() => handleAddPlayer()}>
+                        + Add Player
+                    </button>
+                </li>
             </ul>
         </div>
     );

@@ -1,8 +1,8 @@
-import { Carousel, CarouselControl, CarouselIndicators, CarouselItem, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Modal, ModalBody, ModalHeader } from "reactstrap";
 import "./CharacterSelectModal.css";
 import CharacterIcon from "./CharacterIcon";
 import { useSelector } from "react-redux";
-import { selectAllCharacters, selectAllCharacterTypes, selectAllScripts, selectCharactersFiltered, selectCharactersOfScript } from "../features/characterlist/CharacterListSlice";
+import { selectAllCharacterTypes, selectAllScripts, selectCharactersFiltered } from "../features/characterlist/CharacterListSlice";
 import { useState } from "react";
 
 const SelectorDropdown = (props) => {
@@ -106,11 +106,16 @@ const CharacterSelectModal = (props) => {
                                     {
                                         currCharacters.map(character => {
                                             return (
-                                                <CharacterIcon
-                                                    imageSrc={character["imageSrc"]}
-                                                    imageAlt={character["characterName"]}
-                                                    onClick={props.onSelect}
-                                                />
+                                                <div className="IconHeader">
+                                                    <CharacterIcon
+                                                        imageSrc={character["imageSrc"]}
+                                                        imageAlt={character["characterName"]}
+                                                        onClick={props.onSelect}
+                                                    />
+                                                    <label className="IconLabel">
+                                                        {character["characterName"]}
+                                                    </label>
+                                                </div>
                                             );
                                         })
                                     }

@@ -133,7 +133,24 @@ const StorytellerNotepadComponent = () => {
     return (
         <div className="StorytellerNotes">
             <div className="StorytellerNoteSection">
-                <button className="AddPlayerButton" onClick={AddStoryteller}>+ Add Storyteller</button>
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddStoryteller}
+                >
+                    + Add Storyteller
+                </button>
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddStorytellerCharacter}
+                >
+                    + Add Character
+                </button>
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddNewNote}
+                >
+                    + Add Note
+                </button>
             </div>
             <div className="StorytellerNoteSection">
                 {
@@ -150,14 +167,6 @@ const StorytellerNotepadComponent = () => {
                 }
             </div>
             <div className="StorytellerNoteSection">
-                <button
-                    className="AddPlayerButton"
-                    onClick={AddStorytellerCharacter}
-                >
-                    + Add Character
-                </button>
-            </div>
-            <div className="StorytellerNoteSection">
                 {
                     characters.map(character => {
                         return (
@@ -172,14 +181,6 @@ const StorytellerNotepadComponent = () => {
                         );
                     })
                 }
-            </div>
-            <div className="StorytellerNoteSection">
-                <button
-                    className="AddPlayerButton"
-                    onClick={AddNewNote}
-                >
-                    + Add Note
-                </button>
             </div>
             <div className="StorytellerNoteSection">
                 {

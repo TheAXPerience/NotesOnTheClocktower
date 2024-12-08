@@ -4,7 +4,7 @@
 
 .ModalSection {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,6 +39,21 @@
     bottom: 20px;
     left: 60%;
     padding: 8px;
+    background-color: #FEFBF8;
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.IconHeader {
+    position: relative;
+}
+
+.IconLabel {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    padding: 4px;
+    text-align: center;
+    width: 100%;
     background-color: #FEFBF8;
     border-radius: 16px;
     box-shadow: 1px 1px 1px black;
