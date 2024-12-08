@@ -21,3 +21,39 @@
     background-image: url("../../public/red_paper_lines.png");
     background-repeat: repeat;
 }
+
+.SectionHeader {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    text-align: center;
+}
+
+.SectionImageHeader {
+    height: 160px;
+    width: auto;
+}
+
+.SectionLabelHeader {
+    position: absolute;
+    bottom: 20px;
+    left: 60%;
+    padding: 8px;
+    background-color: #FEFBF8;
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.DropdownSizing {
+    width: 40%;
+}
+
+.DropdownInternal {
+    width: 100%;
+    text-align: center;
+}
+
+.DropdownColoring {
+    background-color: var(--other-color-one) !important;
+    color: var(--other-color-two) !important;
+}

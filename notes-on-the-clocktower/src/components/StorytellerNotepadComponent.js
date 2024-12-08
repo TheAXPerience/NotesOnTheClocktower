@@ -58,6 +58,7 @@ const StorytellerCharacter = (props) => {
             <CloseButton className="CloseButton" onClick={props.deleteCharacter} />
             <CharacterIcon
                 imageSrc={props.imageSrc}
+                imageAlt={props.character}
                 onClick={() => setModalOpen(!modalOpen)}
             />
             <CharacterSelectModal

@@ -97,6 +97,7 @@ const PlayerComponent = (props) => {
                 <div className="PlayerCharacterImage">
                     <CharacterIcon
                         imageSrc={props.imageSrc}
+                        imageAlt={player.characterRole}
                         onClick={() => setModalOpen(!modalOpen)}
                     />
                 </div>

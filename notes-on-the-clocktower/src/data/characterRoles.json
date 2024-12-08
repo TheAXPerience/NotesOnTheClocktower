@@ -1,16 +1,78 @@
 {
     "baseScripts": [
         {
+            "name": "All Characters",
+            "search": "",
+            "imageSrc": ""
+        },
+        {
             "name": "Trouble Brewing",
+            "search": "Trouble Brewing",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/a/a1/Logo_trouble_brewing.png"
         },
         {
             "name": "Sects and Violets",
+            "search": "Sects and Violets",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/4/43/Logo_sects_and_violets.png"
         },
         {
             "name": "Bad Moon Rising",
+            "search": "Bad Moon Rising",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/10/Logo_bad_moon_rising.png"
+        },
+        {
+            "name": "Experimental",
+            "search": "Experimental",
+            "imageSrc": ""
+        },
+        {
+            "name": "Fabled",
+            "search": "Fabled",
+            "imageSrc": ""
+        }
+    ],
+    "characterTypes": [
+        {
+            "index": 0,
+            "name": "All Types",
+            "search": "",
+            "imageSrc": ""
+        },
+        {
+            "index": 1,
+            "name": "Townsfolk",
+            "search": "townsfolk",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/1/12/Generic_townsfolk.png"
+        },
+        {
+            "index": 2,
+            "name": "Outsiders",
+            "search": "outsider",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/53/Generic_outsider.png"
+        },
+        {
+            "index": 3,
+            "name": "Minions",
+            "search": "minion",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/b/bd/Generic_minion.png"
+        },
+        {
+            "index": 4,
+            "name": "Demons",
+            "search": "demon",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/52/Generic_demon.png"
+        },
+        {
+            "index": 5,
+            "name": "Travellers",
+            "search": "traveller",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/07/Generic_traveller.png"
+        },
+        {
+            "index": 6,
+            "name": "Fabled",
+            "search": "fabled",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/c9/Generic_fabled.png"
         }
     ],
     "characterRoles": [
@@ -911,98 +973,110 @@
         {
             "characterName": "Doomsayer",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8f/Icon_doomsayer.png"
         },
         {
             "characterName": "Angel",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/c/ca/Icon_angel.png"
         },
         {
             "characterName": "Buddhist",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_buddhist.png"
         },
         {
             "characterName": "Hell's Librarian",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_hellslibrarian.png"
         },
         {
             "characterName": "Revolutionary",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/94/Icon_revolutionary.png"
         },
         {
             "characterName": "Fiddler",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e5/Icon_fiddler.png"
         },
         {
             "characterName": "Toymaker",
             "characterType": "fabled",
-            "baseScript": "Any Game",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/27/Icon_toymaker.png"
         },
         {
             "characterName": "Fibbin",
             "characterType": "fabled",
-            "baseScript": "Custom Games",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_fibbin.png"
         },
         {
             "characterName": "Duchess",
             "characterType": "fabled",
-            "baseScript": "Custom Games",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_duchess.png"
         },
         {
             "characterName": "Sentinel",
             "characterType": "fabled",
-            "baseScript": "Custom Games",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/d/d4/Icon_sentinel.png"
         },
         {
             "characterName": "Spirit of Ivory",
             "characterType": "fabled",
-            "baseScript": "Custom Games",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/9/96/Icon_spiritofivory.png"
         },
         {
             "characterName": "Djinn",
             "characterType": "fabled",
-            "baseScript": "Custom Games",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/86/Icon_djinn.png"
         },
         {
             "characterName": "Bootlegger",
             "characterType": "fabled",
-            "baseScript": "Experimental",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_bootlegger.png"
         },
         {
             "characterName": "Ferryman",
             "characterType": "fabled",
-            "baseScript": "Experimental",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/8/8f/Icon_ferryman.png"
         },
         {
             "characterName": "Gardener",
             "characterType": "fabled",
-            "baseScript": "Experimental",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_gardener.png"
         },
         {
             "characterName": "Storm Catcher",
             "characterType": "fabled",
-            "baseScript": "Experimental",
+            "baseScript": "Fabled",
             "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_stormcatcher.png"
+        },
+        {
+            "characterName": "Gnome",
+            "characterType": "traveller",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"
+        },
+        {
+            "characterName": "Xaan",
+            "characterType": "minion",
+            "baseScript": "Experimental",
+            "imageSrc": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_xaan.png"
         }
     ]
 }

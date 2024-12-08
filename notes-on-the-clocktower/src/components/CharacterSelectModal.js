@@ -1,8 +1,58 @@
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Carousel, CarouselControl, CarouselIndicators, CarouselItem, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Modal, ModalBody, ModalHeader } from "reactstrap";
 import "./CharacterSelectModal.css";
 import CharacterIcon from "./CharacterIcon";
+import { useSelector } from "react-redux";
+import { selectAllCharacters, selectAllCharacterTypes, selectAllScripts, selectCharactersFiltered, selectCharactersOfScript } from "../features/characterlist/CharacterListSlice";
+import { useState } from "react";
+
+const SelectorDropdown = (props) => {
+    const [toggleLabel, setToggleLabel] = useState(props.initialLabel);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+    return (
+        <Dropdown
+            isOpen={dropdownOpen}
+            toggle={toggle}
+            direction="down"
+            className="DropdownSizing"
+        >
+            <DropdownToggle
+                caret
+                className="DropdownInternal DropdownColoring"
+            >
+                {toggleLabel}
+            </DropdownToggle>
+            <DropdownMenu className="DropdownInternal">
+                {
+                    props.items.map(item => {
+                        return (
+                            <DropdownItem
+                                onClick={() => {
+                                    setToggleLabel(item["name"]);
+                                    props.onChange(item["search"]);
+                                }}
+                                className="DropdownInternal"
+                            >
+                                {item["name"]}
+                            </DropdownItem>
+                        );
+                    })
+                }
+            </DropdownMenu>
+        </Dropdown>
+    );
+}
 
 const CharacterSelectModal = (props) => {
+    const characterTypes = useSelector(selectAllCharacterTypes);
+    const allScripts = useSelector(selectAllScripts);
+
+    const [currScript, setCurrScript] = useState("");
+    const [currType, setCurrType] = useState("");
+
+    const characterRoles = useSelector(selectCharactersFiltered(currScript, currType));
+
     return (
         <Modal
             isOpen={props.isOpen}
@@ -13,31 +63,62 @@ const CharacterSelectModal = (props) => {
             </ModalHeader>
             <ModalBody className={props.modalLines}>
                 <div className="ModalSection">
-                    <button className="AddPlayerButton">
-                        Filter
-                    </button>
+                    <SelectorDropdown
+                        items={allScripts}
+                        initialLabel="--Select Script--"
+                        onChange={setCurrScript}
+                    />
+                    <SelectorDropdown
+                        items={characterTypes}
+                        initialLabel="--Select Type--"
+                        onChange={setCurrType}
+                    />
                 </div>
                 <div className="ModalSection">
-                    <CharacterIcon
-                        imageSrc={"https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"}
-                        onClick={props.onSelect}
-                    />
-                    <CharacterIcon
-                        imageSrc={"https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"}
-                        onClick={props.onSelect}
-                    />
-                    <CharacterIcon
-                        imageSrc={"https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"}
-                        onClick={props.onSelect}
-                    />
-                    <CharacterIcon
-                        imageSrc={"https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"}
-                        onClick={props.onSelect}
-                    />
-                    <CharacterIcon
-                        imageSrc={"https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png"}
-                        onClick={props.onSelect}
-                    />
+                    {
+                        characterTypes.map(charType => {
+                            const currCharacters = characterRoles.filter(
+                                character => character["characterType"] === charType["search"]
+                            ).sort((a, b) => {
+                                if (a["characterName"] < b["characterName"]) {
+                                    return -1;
+                                }
+                                return 1;
+                            });
+
+                            if (currCharacters.length === 0) {
+                                return <></>
+                            }
+
+                            return (
+                                <div className="ModalSection">
+                                    <div className="SectionHeader">
+                                        <img
+                                            className="SectionImageHeader"
+                                            alt={charType["name"]}
+                                            src={charType["imageSrc"]}
+                                        />
+                                        <label className="SectionLabelHeader">
+                                            {charType["name"]}
+                                        </label>
+                                    </div>
+                                    <div className="ModalSection">
+                                    {
+                                        currCharacters.map(character => {
+                                            return (
+                                                <CharacterIcon
+                                                    imageSrc={character["imageSrc"]}
+                                                    imageAlt={character["characterName"]}
+                                                    onClick={props.onSelect}
+                                                />
+                                            );
+                                        })
+                                    }
+                                    </div>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </ModalBody>
         </Modal>

@@ -1,5 +1,4 @@
-import { CloseButton, Collapse } from "reactstrap";
-import CharacterIcon from "./CharacterIcon";
+import { Collapse } from "reactstrap";
 import ExpandingTextareaHook from "../hooks/ExpandingTextareaHook";
 import "./StorytellerComponent.css";
 import { useRef, useState } from "react";
@@ -8,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { editScriptTitle, selectScriptTitle } from "../features/gameinfo/StoryInfoSlice";
 
 const StorytellerComponent = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     
     const dispatch = useDispatch();
     const scriptName = useSelector(selectScriptTitle);
