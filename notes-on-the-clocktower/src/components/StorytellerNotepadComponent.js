@@ -52,6 +52,11 @@ const StorytellerCharacter = (props) => {
             node.style.transform = `rotate(${angle}deg)`;
         }
     }, []);
+
+    const onClick = (character, imageSrc) => {
+        props.editCharacter(character, imageSrc);
+        setModalOpen(!modalOpen);
+    }
     
     return (
         <div className="StorytellerCharacter" ref={rotateRef}>
@@ -65,7 +70,7 @@ const StorytellerCharacter = (props) => {
                 isOpen={modalOpen}
                 toggle={() => setModalOpen(!modalOpen)}
                 modalLines={"ModalLinesRed"}
-                onSelect={() => console.log("Hello World - Storyteller")}
+                onSelect={onClick}
             />
         </div>
     );
@@ -105,8 +110,7 @@ const StorytellerNotepadComponent = () => {
     }
 
     // TODO: edit character
-    const EditStorytellerCharacter = (id) => (character, imageSrc) => () => {
-        // const val = event.target.value;
+    const EditStorytellerCharacter = (id) => (character, imageSrc) => {
         dispatch(editStorytellerCharacter({ id, character, imageSrc }));
     }
 

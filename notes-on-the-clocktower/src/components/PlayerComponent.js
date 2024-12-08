@@ -13,7 +13,8 @@ import {
     editPlayerIsEvil,
     addPlayerNote,
     editPlayerNote,
-    removePlayerNote
+    removePlayerNote,
+    editPlayerCharacter
 } from "../features/playerlist/PlayerListSlice";
 import CharacterSelectModal from "./CharacterSelectModal";
 
@@ -48,6 +49,12 @@ const PlayerComponent = (props) => {
     const ClosePlayer = () => {
         // probably should add an alert first, but just for testing the redux state...
         dispatch(removePlayer(player.id));
+    }
+
+    // edit character
+    const EditPlayerCharacter = (character, imageSrc) => {
+        setModalOpen(!modalOpen);
+        dispatch(editPlayerCharacter({id: player.id, character, imageSrc}));
     }
 
     // edit player name
@@ -166,7 +173,7 @@ const PlayerComponent = (props) => {
                 isOpen={modalOpen}
                 toggle={() => setModalOpen(!modalOpen)}
                 modalLines={"ModalLinesBlue"}
-                onSelect={() => console.log("Hello World - Player")}
+                onSelect={EditPlayerCharacter}
             />
         </div>
     );

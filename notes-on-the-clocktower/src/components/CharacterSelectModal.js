@@ -110,7 +110,10 @@ const CharacterSelectModal = (props) => {
                                                     <CharacterIcon
                                                         imageSrc={character["imageSrc"]}
                                                         imageAlt={character["characterName"]}
-                                                        onClick={props.onSelect}
+                                                        onClick={() => props.onSelect(
+                                                            character["characterName"],
+                                                            character["imageSrc"]
+                                                        )}
                                                     />
                                                     <label className="IconLabel">
                                                         {character["characterName"]}
