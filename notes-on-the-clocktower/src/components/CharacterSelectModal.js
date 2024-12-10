@@ -75,6 +75,19 @@ const CharacterSelectModal = (props) => {
                     />
                 </div>
                 <div className="ModalSection">
+                    <div className="IconHeader">
+                        <CharacterIcon
+                            imageSrc=""
+                            imageAlt="None"
+                            onClick={() => props.onSelect(
+                                "",
+                                ""
+                            )}
+                        />
+                        <label className="IconLabel">
+                            None
+                        </label>
+                    </div>
                     {
                         characterTypes.map(charType => {
                             const currCharacters = characterRoles.filter(

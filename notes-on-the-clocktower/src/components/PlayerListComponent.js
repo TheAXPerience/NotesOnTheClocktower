@@ -11,7 +11,7 @@ const PlayerListItem = (props) => {
     return (
         <li className="Player">
             <button
-                className={"PlayerButton" + (props.player.isDead ? " BloodyButton" : "")}
+                className="PlayerButton"
                 onClick={() => setIsOpen(!isOpen)}
                 style={{
                     backgroundColor: props.player.noteColor,
@@ -20,10 +20,16 @@ const PlayerListItem = (props) => {
                 }}
             >
                 <div className="PlayerCharacter">
-                    <CharacterIconMini imageSrc={props.player.imageSrc} />
+                    <CharacterIconMini
+                        imageSrc={props.player.imageSrc}
+                        backgroundColor={props.player.isDead ? "#ff8890" : "#90e898"}
+                        boxShadow={props.player.isDead ? "0px 0px 4px #FF8890" : "0px 0px 4px #90e898"}
+                    />
                 </div>
                 <div className="PlayerNamePronouns">
-                    <label className="Name">{props.player.playerName}</label>
+                    <label
+                        className="Name"
+                    >{props.player.playerName}</label>
                     <label className="Pronouns">{props.player.pronouns}</label>
                 </div>
             </button>
