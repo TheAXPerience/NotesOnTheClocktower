@@ -7,6 +7,22 @@ const initialState = {
     errMsg: ""
 };
 
+// TODO: add more colors, fix color assignment
+const pastelColors = [
+    "#ffcce1",
+    "#f2f1ed",
+    "#cde5d9",
+    "#f2ebcc",
+    "#c6e2e7",
+    "#f7dde8",
+    "#c8ceee",
+    "#cbd3ad",
+    "#ffc697",
+    "#f7e5b7",
+    "#f9c5c7",
+    "#ddc3e3"
+];
+
 const PlayerListSlice = createSlice({
     name: "playerlist",
     initialState,
@@ -16,10 +32,12 @@ const PlayerListSlice = createSlice({
                 // error?
             }
             const newPlayer = {
-                id: state.playerListIndex++,
+                id: state.playerListIndex,
                 noteIndex: 0,
+                noteColor: pastelColors[(state.playerListIndex % pastelColors.length)],
                 ...action.payload
             };
+            state.playerListIndex++;
             state.playerListArray.push(newPlayer);
         },
         removePlayer: (state, action) => {

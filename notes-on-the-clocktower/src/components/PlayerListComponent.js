@@ -6,25 +6,18 @@ import PlayerComponent from "./PlayerComponent";
 import CharacterIconMini from './CharacterIconMini';
 import "./PlayerListComponent.css";
 
-// TODO: add more colors, fix color assignment
-const pastelColors = [
-    "#b9e2e6",
-    "#fcf784",
-    "#fac7c4",
-    "#bef1ae",
-    "#f9b0a7",
-    "#d6d6e2",
-    "#ffd2a5"
-];
-
 const PlayerListItem = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <li className="Player">
             <button
-                className="PlayerButton"
+                className={"PlayerButton" + (props.player.isDead ? " BloodyButton" : "")}
                 onClick={() => setIsOpen(!isOpen)}
-                style={{ backgroundColor: props.player.noteColor }}
+                style={{
+                    backgroundColor: props.player.noteColor,
+                    borderColor: props.player.isEvil ? "#FF6870" : "#A0CCFF",
+                    boxShadow: props.player.isEvil ? "2px 2px 6px #FF6870" : "2px 2px 6px #A0CCFF"
+                }}
             >
                 <div className="PlayerCharacter">
                     <CharacterIconMini imageSrc={props.player.imageSrc} />
@@ -53,8 +46,7 @@ const PlayerListComponent = () => {
             isDead: false,
             isEvil: false,
             characterRole: "",
-            imageSrc: "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png", // temporary
-            noteColor: pastelColors[Math.floor(Math.random() * pastelColors.length)],
+            imageSrc: "",
             notes: [],
         };
         dispatch(addPlayer(newPlayer));
@@ -63,18 +55,18 @@ const PlayerListComponent = () => {
     return (
         <div className="PlayersContainer">
             <ul className="PlayerList">
-                {
-                    players.map(player => {
-                        return <PlayerListItem player={player} key={player.id} />;
-                    })
-                }
-            </ul>
-            <ul className="PlayerList">
                 <li className="AddPlayer">
                     <button className="AddPlayerButton" onClick={() => handleAddPlayer()}>
                         + Add Player
                     </button>
                 </li>
+            </ul>
+            <ul className="PlayerList">
+                {
+                    players.map(player => {
+                        return <PlayerListItem player={player} key={player.id} />;
+                    })
+                }
             </ul>
         </div>
     );

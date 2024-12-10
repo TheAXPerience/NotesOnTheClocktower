@@ -149,12 +149,6 @@ const StorytellerNotepadComponent = () => {
                 >
                     + Add Character
                 </button>
-                <button
-                    className="AddPlayerButton"
-                    onClick={AddNewNote}
-                >
-                    + Add Note
-                </button>
             </div>
             <div className="StorytellerNoteSection">
                 {
@@ -185,6 +179,14 @@ const StorytellerNotepadComponent = () => {
                         );
                     })
                 }
+            </div>
+            <div className="StorytellerNoteSection">
+                <button
+                    className="AddPlayerButton"
+                    onClick={AddNewNote}
+                >
+                    + Add Note
+                </button>
             </div>
             <div className="StorytellerNoteSection">
                 {

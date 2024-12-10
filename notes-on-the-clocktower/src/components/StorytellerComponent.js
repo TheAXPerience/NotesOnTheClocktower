@@ -22,7 +22,11 @@ const StorytellerComponent = () => {
     return (
         <div className="Storyteller">
             <div className="StorytellerPlaque">
-                <div className="StorytellerBigTitle">Blood on the Clocktower</div>
+                <img
+                    src="https://wiki.bloodontheclocktower.com/skins/pivot/assets/images/logo.png"
+                    alt="Blood on the Clocktower"
+                    className="StorytellerTitleImage"
+                />
                 <textarea
                     className="StorytellerScriptTitle"
                     placeholder="Enter script name here..."
@@ -31,6 +35,11 @@ const StorytellerComponent = () => {
                     value={scriptName}
                     onChange={(event) => setScriptName(event.target.value)}
                 />
+            </div>
+            <div className="GamesButtonPane">
+                <button className="AddPlayerButton">New Game</button>
+                <button className="AddPlayerButton">Save Game</button>
+                <button className="AddPlayerButton">Load Game</button>
             </div>
             <div className="PresentedBy">
                 <button className="PresentedByButton" onClick={() => setIsOpen(!isOpen)}>Presented By...</button>
